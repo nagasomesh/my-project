@@ -92,7 +92,7 @@ The setup script will:
 
 ### Manual Setup
 
-### 1. Verify Java and Maven Installation
+#### 1. Verify Java and Maven Installation
 
 ```bash
 # Check Java version
@@ -102,7 +102,7 @@ java -version
 mvn -version
 ```
 
-### 2. Install Dependencies
+#### 2. Install Dependencies
 
 ```bash
 # Maven will automatically download dependencies
