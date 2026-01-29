@@ -70,6 +70,28 @@ git log --oneline -10
 
 After pulling the project, follow these steps to set it up:
 
+### Quick Setup (Automated)
+
+Run the setup script to automatically check prerequisites and build the project:
+
+```bash
+# Make the script executable (if not already)
+chmod +x setup.sh
+
+# Run the setup script
+./setup.sh
+
+# Or run with bash directly
+bash setup.sh
+```
+
+The setup script will:
+- Verify all prerequisites are installed
+- Build the Maven project
+- Optionally build and run the Docker container
+
+### Manual Setup
+
 ### 1. Verify Java and Maven Installation
 
 ```bash
@@ -156,14 +178,23 @@ This project includes a Jenkins pipeline configuration (`Jenkinsfile`) that auto
 
 ```
 my-project/
-├── Dockerfile              # Docker configuration for Tomcat deployment
-├── Jenkinsfile            # Jenkins CI/CD pipeline definition
-├── pom.xml                # Maven project configuration
-├── index.html             # Main HTML page
-├── style.css              # Stylesheet for the frontend
-├── readme.txt             # Template attribution and license
-├── webhook-test           # Webhook configuration file
-└── README.md              # This file
+├── .gitignore                          # Git ignore file
+├── Dockerfile                          # Docker configuration for Tomcat deployment
+├── Jenkinsfile                         # Jenkins CI/CD pipeline definition
+├── README.md                           # This file
+├── pom.xml                             # Maven project configuration
+├── readme.txt                          # Template attribution and license (root)
+├── setup.sh                            # Automated setup script
+├── webhook-test                        # Webhook configuration file
+├── index.html                          # Original HTML (kept for reference)
+├── style.css                           # Original CSS (kept for reference)
+└── src/
+    └── main/
+        └── webapp/
+            ├── WEB-INF/
+            │   └── web.xml             # Web application deployment descriptor
+            ├── index.html              # Main HTML page
+            └── style.css               # Stylesheet for the frontend
 ```
 
 ## Features

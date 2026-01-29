@@ -98,10 +98,10 @@ main() {
         print_info "Dockerfile not found"
     fi
     
-    if [ -f "index.html" ]; then
-        print_success "index.html found"
+    if [ -f "src/main/webapp/index.html" ]; then
+        print_success "src/main/webapp/index.html found"
     else
-        print_info "index.html not found"
+        print_info "src/main/webapp/index.html not found"
     fi
     
     # Build the project
